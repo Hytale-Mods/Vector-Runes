@@ -1,0 +1,79 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Darkhax_VectorRune_Base.name",
+    "Description": "server.items.Darkhax_VectorRune_Base.description"
+  },
+  "ItemLevel": 10,
+  "MaxStack": 100,
+  "Categories": [
+    "Blocks.Deco"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Set": "Rock_Stone",
+  "Recipe": {
+    "TimeSeconds": 1,
+    "Input": [
+      {
+        "ResourceTypeId": "Rock",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Ingredient_Crystal_Green",
+        "Quantity": 1
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Id": "Workbench",
+        "Type": "Crafting",
+        "Categories": [
+          "Workbench_Tinkering"
+        ]
+      }
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -5
+    ]
+  },
+  "BlockType": {
+    "State": {
+      "Id": "DarkhaxSpellbookConveyor",
+      "Height": 0.4,
+      "Items": true,
+      "Entities": true,
+      "Players": true,
+      "Force": 0.1
+    },
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Group": "Stone",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Rocks",
+        "ItemId": "Darkhax_VectorRune_Base"
+      }
+    },
+    "BlockSoundSetId": "Stone",
+    "BlockBreakingDecalId": "Breaking_Decals_Rock",
+    "CustomModel": "Blocks/Tinkering/Darkhax_VectorRune_Plate.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/Tinkering/Darkhax_VectorRune_Base.png"
+      }
+    ],
+    "HitboxType": "Darkhax_VectorRune_Base",
+    "VariantRotation": "NESW"
+  },
+  "Icon": "Icons/ItemsGenerated/Darkhax_VectorRune_Base.png"
+}

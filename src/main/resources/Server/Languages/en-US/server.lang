@@ -1,0 +1,11 @@
+items.Darkhax_VectorRune_Base.name=Vector Rune
+items.Darkhax_VectorRune_Base.description=Gently pushes mobs around.
+
+items.Darkhax_VectorRune_Fast.name=Fast Vector Rune
+items.Darkhax_VectorRune_Fast.description=Pushes mobs around.
+
+items.Darkhax_VectorRune_Extreme.name=Extreme Vector Rune
+items.Darkhax_VectorRune_Extreme.description=Aggressively pushes mobs around.
+
+items.Darkhax_VectorRune_Ultra.name=Ultra Vector Rune
+items.Darkhax_VectorRune_Ultra.description=Violently pushes mobs around.

@@ -1,0 +1,59 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Darkhax_VectorRune_Ultra.name",
+    "Description": "server.items.Darkhax_VectorRune_Ultra.description"
+  },
+  "Parent": "Darkhax_VectorRune_Base",
+  "Recipe": {
+    "TimeSeconds": 1,
+    "Input": [
+      {
+        "ItemId": "Darkhax_VectorRune_Extreme",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Ingredient_Crystal_Blue",
+        "Quantity": 1
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Id": "Workbench",
+        "Type": "Crafting",
+        "Categories": [
+          "Workbench_Tinkering"
+        ]
+      }
+    ]
+  },
+  "BlockType": {
+    "ParticleColor": "#1cc1c5",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/Tinkering/Darkhax_VectorRune_Ultra.png"
+      }
+    ],
+    "State": {
+      "Id": "DarkhaxSpellbookConveyor",
+      "Height": 0.4,
+      "Items": true,
+      "Entities": true,
+      "Players": true,
+      "Force": 1.2
+    }
+  },
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -5
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/Darkhax_VectorRune_Ultra.png"
+}
