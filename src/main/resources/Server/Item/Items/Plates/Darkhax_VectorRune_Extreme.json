@@ -34,6 +34,12 @@
         "Texture": "Blocks/Tinkering/Darkhax_VectorRune_Extreme.png"
       }
     ],
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Rocks",
+        "ItemId": "Darkhax_VectorRune_Extreme"
+      }
+    },
     "State": {
       "Id": "DarkhaxSpellbookConveyor",
       "Height": 0.4,
