@@ -1,7 +1,7 @@
 {
     "Group": "Darkhax",
     "Name": "VectorRune",
-    "Version": "2026.1.25-8293",
+    "Version": "2026.2.18-7351",
     "Description": "Pushes mobs around.",
     "Authors": [
         {
@@ -9,7 +9,7 @@
         }
     ],
     "Website": "https://www.curseforge.com/hytale/mods/vector-runes",
-    "ServerVersion": "*",
+    "ServerVersion": "2026.02.17-255364b8e",
     "Dependencies": {
         
     },

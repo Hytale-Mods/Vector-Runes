@@ -26,11 +26,25 @@ javadoc {
     options.addStringOption('Xdoclint:-missing', '-quiet')
 }
 
+repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                url "https://cursemaven.com"
+            }
+        }
+        filter {
+            includeGroup "curse.maven"
+        }
+    }
+}
+
 // Adds the Hytale server as a build dependency, allowing you to reference and
 // compile against their code. This requires you to have Hytale installed using
 // the official launcher for now.
 dependencies {
     implementation(files("$hytaleHome/install/$patchline/package/game/latest/Server/HytaleServer.jar"))
+    implementation "curse.maven:spellbook-1417152:7641824"
 }
 
 // Create the working directory to run the server if it does not already exist.
@@ -61,7 +75,6 @@ tasks.named('processResources') {
 }
 
 processResources {
-    exclude '**/*.bbmodel'
     doLast {
         def jsonMinifyStart = System.currentTimeMillis()
         def jsonMinified = 0
@@ -82,14 +95,6 @@ processResources {
     }
 }
 
-tasks.withType(AbstractArchiveTask).configureEach {
-    from("${rootProject.projectDir}/LICENSE.md") {
-        rename {
-            "license_${rootProject.name.toLowerCase().replaceAll('\\s+', '_')}.txt"
-        }
-    }
-}
-
 // Creates a run configuration in IDEA that will run the Hytale server with
 // your plugin and the default assets.
 idea.project.settings.runConfigurations {
@@ -99,9 +104,6 @@ idea.project.settings.runConfigurations {
         programParameters = "--allow-op --assets=$hytaleHome/install/$patchline/package/game/latest/Assets.zip"
         if (includes_pack.toBoolean()) {
             programParameters += " --mods=${sourceSets.main.java.srcDirs.first().parentFile.absolutePath}"
-        }
-        if (load_user_mods.toBoolean()) {
-            programParameters += " --mods=$hytaleHome/UserData/Mods"
         }
         workingDirectory = serverRunDir.absolutePath
     }
